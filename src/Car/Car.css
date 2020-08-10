@@ -1,0 +1,6 @@
+.car {
+    border: 1px solid #ccc;
+    padding: 10px 0;
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14);
+    border-radius: 5px
+}

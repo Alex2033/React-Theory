@@ -55,6 +55,10 @@ class App extends Component {
     })
   }
 
+  onSelectInput = (ev) => {
+    ev.target.select();
+  }
+
   render() {
 
     let cars = null;
@@ -66,6 +70,7 @@ class App extends Component {
             key={index}
             onChangeName={event => this.onChangeName(event.target.value, index)}
             onDelete={() => this.onDeleteHandler(index)}
+            onSelectInput={event => this.onSelectInput(event)}
             name={car.name} 
             year={car.year}
           />
@@ -83,10 +88,13 @@ class App extends Component {
 
         <div style={{
           marginTop: 20,
+          maxWidth: 1200,
+          justifyContent: 'center',
+          margin: '20px auto 0',
           display: 'grid',
           gap: 20,
           gridTemplateColumns: 'repeat(auto-fit, 280px)',
-          
+
         }}>{ cars }</div>
         
 
